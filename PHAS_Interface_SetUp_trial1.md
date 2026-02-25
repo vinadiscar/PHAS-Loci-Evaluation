@@ -317,8 +317,8 @@ Feb 18 2026
 
 - ###### Issue 1: Vite cannot serve files outside project root
 
-You are creating symlinks inside: PHASER-project/public/data
-But the original files are in: /Volumes/okamura-lab-hpc/...
+creating symlinks inside: PHASER-project/public/data
+but the original files are in: /Volumes/okamura-lab-hpc/...
 
 - ###### Fix 1: Edit vite.config.js and add:
 ```sh
