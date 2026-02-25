@@ -1,4 +1,4 @@
-## Location of Files
+## Location of Files (from Abby)
 ```sh
 ### sRNA genome-mapping bowtie 
 - https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoita--okayama
