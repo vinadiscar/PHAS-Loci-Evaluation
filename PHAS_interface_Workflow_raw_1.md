@@ -379,7 +379,7 @@ import pandas as pd
 
 app = FastAPI()
 
-# ✅ CORS configuration
+#  CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # for development (allow all)
@@ -735,9 +735,9 @@ def get_tracks():
 Open `main.py` and add this:
 
 ```sh
-from routers import track_router   # 👈 ADD
+from routers import track_router   # ADD
 
-app.include_router(track_router.router)  # 👈 ADD
+app.include_router(track_router.router)  #  ADD
 ```
 
 - Updated `main.py`
@@ -745,14 +745,14 @@ app.include_router(track_router.router)  # 👈 ADD
 ```sh
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles  # 👈 ADD
+from fastapi.staticfiles import StaticFiles  #  ADD
 import pandas as pd
 
-from routers import track_router   # 👈 ADD THIS LINE
+from routers import track_router   #  ADD THIS LINE
 
 app = FastAPI()
 
-# ✅ CORS configuration
+#  CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # for development
@@ -761,11 +761,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Serve BigWig files
-app.mount("/data", StaticFiles(directory="static"), name="data")  # 👈 ADD
+#  Serve BigWig files
+app.mount("/data", StaticFiles(directory="static"), name="data")  #  ADD
 
-# ✅ Include Track Router
-app.include_router(track_router.router)   # 👈 ADD THIS LINE
+#  Include Track Router
+app.include_router(track_router.router)   #  ADD THIS LINE
 
 # Load PHAS loci table
 phas_df = pd.read_csv("data/phas_loci.tsv", sep="\t")
@@ -870,7 +870,7 @@ function App() {
       {/* Table */}
       <div className="panel table-panel">
         <h2>PHAS Loci Table</h2>
-        {/* 👇 IMPORTANT: pass setLocus */}
+        {/*  IMPORTANT: pass setLocus */}
         <PHASTable onSelect={setLocus} />
       </div>
 
@@ -892,7 +892,7 @@ function App() {
         <div className="panel" style={{ flex: 1 }}>
           <h2>Genome Viewer</h2>
 
-          {/* 👇 REAL IGV */}
+          {/*  REAL IGV */}
           <IGVViewer locus={locus} selectedTracks={tracks} />
         </div>
 
@@ -924,7 +924,7 @@ interface PHAS {
   End_Pos: number
 }
 
-// ✅ [ADDED] accept onSelect as prop
+//  [ADDED] accept onSelect as prop
 function PHASTable({ onSelect }: { onSelect: (locus: string) => void }) {
 
   const [data, setData] = useState<PHAS[]>([])
@@ -946,7 +946,7 @@ function PHASTable({ onSelect }: { onSelect: (locus: string) => void }) {
     console.log("Selected locus:", row)
     console.log("Region:", region)
 
-    // ✅ [ADDED] send locus to parent (App.tsx)
+    //  [ADDED] send locus to parent (App.tsx)
     onSelect(region)
   }
 
@@ -1039,26 +1039,26 @@ export default function IGVViewer({
   const igvContainer = useRef<HTMLDivElement | null>(null)
   const igvBrowser = useRef<any>(null)
 
-  // ✅ Initialize IGV once
+  //  Initialize IGV once
   useEffect(() => {
     if (!igvContainer.current) return
 
     igv.createBrowser(igvContainer.current, {
-      genome: "hg38", // ⚠️ TEMP (we will fix later if custom genome)
+      genome: "hg38", //  TEMP (we will fix later if custom genome)
       locus: "chr1:1-10000",
     }).then((browser) => {
       igvBrowser.current = browser
     })
   }, [])
 
-  // ✅ Jump to locus
+  //  Jump to locus
   useEffect(() => {
     if (igvBrowser.current && locus) {
       igvBrowser.current.search(locus)
     }
   }, [locus])
 
-  // ✅ Load tracks
+  //  Load tracks
   useEffect(() => {
     if (!igvBrowser.current) return
 
