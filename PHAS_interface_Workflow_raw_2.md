@@ -148,7 +148,7 @@ import os
 
 app = FastAPI()
 
-# ✅ CORS configuration
+#  CORS configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # for development
@@ -157,10 +157,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ✅ Serve static files (BIGWIG, genome, etc.)
+# Serve static files (BIGWIG, genome, etc.)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# ✅ Load PHAS loci table
+#  Load PHAS loci table
 phas_df = pd.read_csv("data/phas_loci.tsv", sep="\t")
 
 @app.get("/")
@@ -171,7 +171,7 @@ def root():
 def get_phas_list():
     return phas_df.to_dict(orient="records")
 
-# ✅ NEW: Return available BigWig tracks dynamically
+#  NEW: Return available BigWig tracks dynamically
 @app.get("/api/tracks")
 def get_tracks():
     bw_dir = "static/bw"
@@ -241,7 +241,7 @@ export default function IGVViewer({
 
   const [tracks, setTracks] = useState<Track[]>([])
 
-  // ✅ 1. Fetch tracks from backend
+  //  1. Fetch tracks from backend
   useEffect(() => {
     fetch("http://127.0.0.1:8001/api/tracks")
       .then((res) => res.json())
@@ -251,26 +251,26 @@ export default function IGVViewer({
       .catch((err) => console.error("Error loading tracks:", err))
   }, [])
 
-  // ✅ 2. Initialize IGV ONLY ONCE
+  //  2. Initialize IGV ONLY ONCE
   useEffect(() => {
     if (!igvContainer.current || igvBrowser.current) return
 
     igv.createBrowser(igvContainer.current, {
-      genome: "hg38", // 🔥 TEMP → replace later with your genome
+      genome: "hg38", //  TEMP → replace later with your genome
       locus: locus || "chr1:1-10000",
     }).then((browser) => {
       igvBrowser.current = browser
     })
   }, [])
 
-  // ✅ 3. Jump to selected PHAS locus
+  //  3. Jump to selected PHAS locus
   useEffect(() => {
     if (igvBrowser.current && locus) {
       igvBrowser.current.search(locus)
     }
   }, [locus])
 
-  // ✅ 4. Load tracks dynamically (optimized)
+  //  4. Load tracks dynamically (optimized)
   useEffect(() => {
     if (!igvBrowser.current || tracks.length === 0) return
 
@@ -337,7 +337,7 @@ vi main.tsx
  ```sh
  import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import 'igv/dist/igv.css'   // ✅ ADD THIS LINE (VERY IMPORTANT)
+import 'igv/dist/igv.css'   //  ADD THIS LINE (VERY IMPORTANT)
 import './index.css'
 import App from './App.tsx'
 
@@ -395,7 +395,7 @@ index.html:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
 
-    <!-- ✅ ADD THIS LINE (IGV CSS via CDN) -->
+    <!--  ADD THIS LINE (IGV CSS via CDN) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/igv@2.15.4/dist/igv.css"
@@ -451,7 +451,7 @@ vi index.html
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ CORRECT IGV CSS -->
+    <!--  CORRECT IGV CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/igv@2.15.5/dist/igv.min.css"
@@ -496,7 +496,7 @@ I already installed IGV already (`npm install igv`), so we'll use the local pack
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 
-// ✅ Import IGV CSS from node_modules (CORRECT PATH)
+//  Import IGV CSS from node_modules (CORRECT PATH)
 import "igv/dist/igv.css"
 
 import "./index.css"
@@ -626,7 +626,7 @@ function App() {
       <div className="panel">
         <h2>Genome Viewer</h2>
 
-        {/* ✅ THIS IS THE KEY */}
+        {/*  THIS IS THE KEY */}
         <IGVViewer locus={locus} />
       </div>
     </div>
@@ -658,7 +658,7 @@ npm run dev -- --host --port 5174
 ###### Explanation:
 - Backend is running
 - Frontend can connect
-- ❌ BUT backend is returning empty tracks
+-  BUT backend is returning empty tracks
 
 ## Solve: 
 
@@ -719,7 +719,7 @@ npm run dev -- --host --port 5174
 ```sh
 mv PHAS PHAS_2 
 ```
-## 1. Copy EEVEE Folder to PHASER for mock
+## 1. Copy Folder to PHASER for mock
 ```sh 
 cp -r "/Volumes/Install macOS Mojave/Ogawa/EEVEE" "/Volumes/Install macOS Mojave/Vina/PHASER"
 ```
@@ -838,7 +838,7 @@ vi App.tsx
 
 - App.tsx 
 ```sh
-// PHAS Minimal Application (based on EEVEE)
+// PHAS Minimal Application
 
 import { useState, useCallback } from 'react';
 import { PHASTable } from './components/PHASTable';
@@ -848,13 +848,13 @@ import { phasData } from './data/phasData';
 import './App.css';
 
 function App(): JSX.Element {
-  // IGV hook (reuse from EEVEE)
+  // IGV hook
   const { browserRef, isReady } = useIGV();
 
   // Selected PHAS
   const [selectedId, setSelectedId] = useState<string | null>(null);
 
-  // 🔥 Core function: when clicking PHAS
+  //  Core function: when clicking PHAS
   const handlePHASSelect = useCallback(
     (record: { phas_id: string; locus: string }) => {
       setSelectedId(record.phas_id);
@@ -935,7 +935,7 @@ interface UseIGVResult {
   navigateToLocus: (locus: string) => Promise<void>;
 }
 
-// 🔥 CLEAN IGV CONFIG (H. longicornis)
+//  CLEAN IGV CONFIG (H. longicornis)
 const IGV_CONFIG: igv.IGVConfig = {
   genome: 'custom',
 
@@ -946,7 +946,7 @@ const IGV_CONFIG: igv.IGVConfig = {
     indexURL: '/genome/GWHAMMI00000000.genome.fasta.fai',
   },
 
-  // Start clean (no EEVEE tracks)
+  // Start clean 
   tracks: [],
 
   showNavigation: true,
@@ -991,7 +991,7 @@ export function useIGV(): UseIGVResult {
     };
   }, []);
 
-  // 🔥 Safe navigation
+  //  Safe navigation
   const navigateToLocus = useCallback(
     async (locus: string) => {
       if (!browser || !locus) return;
