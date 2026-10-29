@@ -1,4 +1,4 @@
-## Location of Files (from Abby)
+#### Location of PHAS Files (from Abby)
 ```sh
 ### sRNA genome-mapping bowtie 
 - https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoita--okayama
@@ -14,4 +14,9 @@
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/Hlo_PHAS_20251213/csv
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/Hlo_PHAS_20251213/plots
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/misipi_RNA
+```
+
+## 1. Set-Up PHASER
+- Summary of Workflow is in: 
+```sh
 ```
