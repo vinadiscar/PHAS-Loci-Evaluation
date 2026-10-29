@@ -1,4 +1,4 @@
-#### Location of PHAS Files 
+#### Location of Original H. longicornis PHAS Files 
 ```sh
 ### sRNA genome-mapping bowtie 
 - https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoita--okayama
