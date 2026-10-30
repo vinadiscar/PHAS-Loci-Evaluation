@@ -46,6 +46,11 @@ MiSiPi.RNA_Analysis.md
 ## 5. Transcriptome Level Analysis
 
 - #### Transcriptome Reference:  `assembled_transcripts_HaeL2018ref_stringtie_merged.fa`
+
+- #### Mapping:
+```sh
+20261028_Map_sRNA_TotalRNA_x_assembled_transcripts_HaeL2018ref_stringtie_merged.md
+```
 - #### Clean Total RNA-seq FASTQ files:
 ##### A. Libraries N024-N048
 Source: /project/okamura-lab/raw_sequencing_data/20211202_hloRNAseq_BGI/F21FTSAPJT0258_INSjubcR/Clean
@@ -53,10 +58,6 @@ Copied: /work/ma-discar/20211202_hloRNAseq_BGI/Clean
 ##### B. Libraries DRR508XX
 Source:  /project/okamura-lab-hpc/20240106_H_longicornis_Vina/fastp/fastp
 Copied:  /work/ma-discar/20231214_hloRNAseq_NIG/fastp
-- #### Mapping:
-```sh
-20261028_Map_sRNA_TotalRNA_x_assembled_transcripts_HaeL2018ref_stringtie_merged.md
-```
 (Source: Canran Feng)
 ```sh
 ### sRNA genome-mapping bowtie 
