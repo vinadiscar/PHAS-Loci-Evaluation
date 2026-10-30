@@ -6,8 +6,7 @@ PHAS_interface_Workflow_SUMMARY_raw1-16_20261030.md
 ## 2. IGV-Genome- Level Analysis
 - Reads mapped to Genome GWHAMMI00000000 :
 ##### Tracks Preparation
-- sRNA 5' nucleotide and coverage tracks
-Summary of analysis can be found in:
+- sRNA 5' nucleotide and coverage tracks:
 ```sh
 PHAS_interface_Workflow_raw_14.html
 ``` 
