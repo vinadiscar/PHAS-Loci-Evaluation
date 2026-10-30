@@ -23,3 +23,32 @@
 ```sh
 PHAS_interface_Workflow_SUMMARY_raw1-16_20261030.md
 ```
+## 2. IGV-Genome- Level Analysis
+##### Tracks Preparation
+- 5' nucleotide tracks 
+- mRNA tracks
+- sRNA tracks (genome-mapping bowtie)
+
+```sh
+# Source:
+https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoita--okayama
+/project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/bowtie
+/project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/bam
+
+# Bam to bigwig conversion
+```
+- ##### Genome annotation
+
+## 3. IGV- Transcriptome Level Analysis
+Summary: 
+```sh
+```
+## 4. PHAS Loci Evaluation
+```sh
+```
+
+
+
+
+
+
