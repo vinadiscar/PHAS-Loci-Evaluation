@@ -79,12 +79,10 @@ touch app/utils/file_utils.py
 - SizeDistributionPanel
 - sRNAAbundancePanel
 
-***Latest scripts can be located below (as of 20261023)
-
 ---
 
 # ***Scripts
-
+***Latest scripts can be located below (as of 20261023)
 ### 2A. Frontend Folders
 ##### A1. src/App.tsx 
 ```sh
