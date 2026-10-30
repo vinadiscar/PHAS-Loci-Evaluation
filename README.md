@@ -22,10 +22,8 @@ https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoit
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/bowtie
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/bam
 ```
-- ##### Genome annotation uses:
-```sh
-HaeL2018_stringtie_merged_transcripts.gff3
-```
+- ##### Genome annotation uses: `HaeL2018_stringtie_merged_transcripts.gff3`
+  
 ## 3. GLobal Characterization of PHAS loci 
 #### 07.29.2026 Strand-specific 5' Nucleotide Analysis:
 ```sh
