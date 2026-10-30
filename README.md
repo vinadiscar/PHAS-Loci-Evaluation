@@ -25,7 +25,7 @@ https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoit
 - ##### Genome annotation uses: `HaeL2018_stringtie_merged_transcripts.gff3`
   
 ## 3. GLobal Characterization of PHAS loci 
-#### 07.29.2026 Strand-specific 5' Nucleotide Analysis:
+#### 07.29.2026 Strand-specific sRNA 5' Nucleotide Analysis:
 ```sh
 PHAS_interface_Workflow_raw_12.html
 ```
@@ -45,9 +45,17 @@ MiSiPi.RNA_Analysis.md
 ```
 ## 5. Transcriptome Level Analysis
 
-Summary: 
+- #### Transcriptome Reference:  `assembled_transcripts_HaeL2018ref_stringtie_merged.fa`
+- #### Clean Total RNA-seq FASTQ files:
+A. Libraries N024-N048
+Source: /project/okamura-lab/raw_sequencing_data/20211202_hloRNAseq_BGI/F21FTSAPJT0258_INSjubcR/Clean
+Copied: /work/ma-discar/20211202_hloRNAseq_BGI/Clean
+B. Libraries DRR508XX
+Source:  /project/okamura-lab-hpc/20240106_H_longicornis_Vina/fastp/fastp
+Copied:  /work/ma-discar/20231214_hloRNAseq_NIG/fastp
+- #### Mapping:
 ```sh
-
+20261028_Map_sRNA_TotalRNA_x_assembled_transcripts_HaeL2018ref_stringtie_merged.md
 ```
 #### Location of Original H. longicornis PHAS Files 
 (Source: Canran Feng)
