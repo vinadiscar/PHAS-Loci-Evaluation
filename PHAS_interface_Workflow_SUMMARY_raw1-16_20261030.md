@@ -82,7 +82,7 @@ touch app/utils/file_utils.py
 ---
 
 # ***Scripts
-***Latest scripts can be located below (as of 20261023)
+***Latest scripts can be located below (20261023)
 ### 2A. Frontend Folders
 ##### A1. src/App.tsx 
 ```sh
