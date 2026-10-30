@@ -21,5 +21,5 @@
 ## 1. Set-Up PHASER
 - Summary of Workflow is in: 
 ```sh
-PHAS_interface_Workflow_raw_1-16_SUMMARY_20261030.md
+PHAS_interface_Workflow_SUMMARY_raw1-16_20261030.md
 ```
