@@ -25,7 +25,7 @@ HaeL2018_transcriptome
 ```
 ```sh
 #Job ID: 135699
-#Log: 135699
+#Log: 135699.out
 ```
 
 ## A. sRNAseq x assembled_transcripts_HaeL2018ref_stringtie_merged.fa
