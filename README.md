@@ -58,7 +58,8 @@ Copied: /work/ma-discar/20211202_hloRNAseq_BGI/Clean
 ##### B. Libraries DRR508XX
 Source:  /project/okamura-lab-hpc/20240106_H_longicornis_Vina/fastp/fastp
 Copied:  /work/ma-discar/20231214_hloRNAseq_NIG/fastp
-(Source: Canran Feng)
+
+##### Original PHAS files
 ```sh
 ### sRNA genome-mapping bowtie 
 - https://github.com/CanranFeng/phasiRNA/blob/main/sRNAminer_PHAS.md#batch-modeoita--okayama
@@ -74,6 +75,7 @@ Copied:  /work/ma-discar/20231214_hloRNAseq_NIG/fastp
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/Hlo_PHAS_20251213/csv
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/Hlo_PHAS_20251213/plots
 /project/okamura-lab-hpc/Canran_phasiRNAs/ticks/HaeL/PHAS_candidate_sRNA_readInfo_from_bowtie/misipi_RNA
+(Source: Canran Feng)
 ```
 
 
